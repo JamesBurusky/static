@@ -1,0 +1,261 @@
+div#gis {width: 100%; position: relative; height: 76%;}
+#gi { width: 100%; position: relative; height: 100%}
+/*div {width: 98%; position: fixed; height: 99%;}*/
+h1{color: #ffffff; text-align: center; }
+h2.index{color: #ffffff; text-align: center; padding-top: 0}
+/*nav{position: relative; height: 12%; }*/
+/*section {width: 98%; position: fixed; background-color: #35424a; height: 80%;}*/
+body#index {background-color: #35424a; }/*height: 95%; width: 100%}*/
+/*div { height: 85%; width: 98%}*/
+/*section{margin-top: 135%}*/
+section{position: static;}
+
+#map{
+	width: 20px;
+}
+
+html, body{height: 100%}
+/*In order for the div element to have a working height by percentage all its parent heights must have percentage*/
+body{
+  font:15px/1.5 Arial, Helvetica, sans-serif;/*font-size/line-height, font-family*/
+  margin:0;
+  margin:0;/*No padding or margin*/
+  background-color:#d3d3d3;
+  /*background-color:#f4f4f4;
+  background-image:url('./img/pad1.png');*/
+}
+/*   Global  */
+.container{
+  width:80%;/*Because we want it to be responsive we dont use pixels but percentage*/
+  margin:auto;/*To move content to the middle rather than aligned to the left*/
+  overflow:hidden;/*If something goes outside the div, no scroll*/
+}
+
+ul{
+  margin:0;/*Unordered list have margin and padding by default remove it*/
+  padding:0;
+}
+
+.button_1{
+  height:38px;
+  background:#448ccb;
+  border:0;
+  padding-left:20px;
+  padding-right:20px;
+  color:#ffffff;
+}
+
+.dark{
+  padding:15px;
+  background:#35424a;
+  color:#ffffff;
+  margin-top:10px;
+  margin-bottom:10px;
+}
+
+/*  Header  */
+header{
+  background:#35424a;
+  color:#ffffff;/*text color. Color for links is done seperately*/
+  padding-top:0px;
+  min-height:0px;/*When the page responds to smaller screen sizes the page adjusts*/
+  border-bottom:#448ccb 3px solid;/*color, width style*/
+  height: 12%
+}
+
+header a{
+  color:#ffffff;
+  text-decoration:none;/*Remove the underline usually on links*/
+  text-transform:uppercase;/*Change to uppercase*/
+  font-size:16px;
+}
+
+header li{
+  float:left;
+  display:inline;/*Display the list items(links) in a line*/
+  padding: 0 20px 0 20px;
+}
+
+header #branding{
+  float:left;
+}
+
+header #branding h1{
+  margin:0;
+}
+header nav{
+  float: right;
+  margin-top: 10px;/*The logo is floated to the left while the nav to the left*/
+}
+
+header .highlight, header .current a{
+  color:#448ccb;/*Make the current link have an orange color*/
+  font-weight:bold;
+}
+
+header a:hover{
+  color:#cccccc;
+  font-weight:bold;
+}
+
+/*  showcase  */
+/*To enable responsiveness avoid fixed dimensions such as width and height; use min*/
+#showcase{
+  min-height:400px;
+  background:url('../img/showcase.jpg') no-repeat 0 -400px;
+  /*To go outside the current folder and reach the image use double dots*/
+  text-align: center;
+  color:#ffffff;
+}
+#showcase h1{
+  margin-top: 100px;
+  font-size:55px;
+  margin-bottom:10px;
+}
+#showcase p{
+  font-size:20px;
+}
+
+/*Newsletter*/
+#newsletter{
+  padding:15px;
+  color:#ffffff;
+  background: #35424a;
+  text-align: center;/*Aligns the worth the diff text to the middle*/
+  border-bottom:#448ccb 7px solid;/*color, width style*/
+}
+/*
+#newsletter h1{
+  float:left;
+  align:center;
+}
+
+#newsletter form{
+  float:right;
+  margin-top: 15px;
+}
+#newsletter input{
+  padding:4px;
+  height:25px;
+  width:250px;
+}*/
+
+/*Boxes*/
+#boxes{
+  margin-top:20px;
+}
+#boxes .box{
+  float:left;
+  text-align:center;
+  width:30%;
+  padding:10px;
+}
+
+#boxes .box img{
+  width:90px;
+}
+#img{
+  width:30px;
+}
+
+/*  Sidebar  */
+aside#sidebar{
+  float:right;
+  width:30%;
+  margin-top:0px;
+}
+
+aside#sidebar .quote input, aside#sidebar .textarea{
+  width:90%;
+  padding:5px;
+}
+
+/*  Main-Col*/
+article#main-col{
+  float:left;
+  width:65%;
+}
+
+/*  Service  */
+ul#services{
+  list-style:none;
+  padding: 20px;
+  border:#cccccc solid 1px;
+  margin-bottom:px;
+  background: #e6e6e6;
+}
+footer{
+  padding:20px;
+  margin-top:20px;
+  color:#ffffff;
+  background-color:#448ccb;
+  text-align:center;
+}
+
+/*  Media Queries that help in ensuring a site fits on a mobile device neatly*/
+@media(max-width:868px) {
+  /*Anything put here is only effected if the device is within that width*/
+  header #branding,
+  header nav,
+  header nav li,
+  #newsletter h1,
+  #newsletter form,
+  #boxes .box,
+  article#main-col,
+  aside#sidebar{
+    float:none;
+    text-align: center;
+    width:100%;
+  }
+  /***********/
+  #newsletter form button.button_{
+    text-align: center;
+    max-width: 40%;
+  }
+  header{
+    padding-bottom:20px;
+    max-height: 4%;
+  }
+  header #branding h1{
+  font-size: 18px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  }
+  
+  header nav{
+  	margin-top: -8px;
+  	padding-top: 0px;
+  }
+  header nav li{
+  	margin-top: 0px;
+  	padding-top: 0px;
+  }
+  header nav li a{
+  	font-size: 60%;
+  	margin-top: 0px;
+
+  }
+  section h2{
+  	font-size: 10px;
+  	margin: 0px;
+  }
+  h2#blog{
+    font-size: 100px;
+  }
+
+  /*****************/
+  #showcase h1{
+    margin-top: 40px;
+  }
+  #newsletter button, quote button{
+    display: block;
+    width:1000px;
+  }
+  #newsletter form input[type="email"]/*Only the email*/, .quote input, .quote textarea{
+    width: 1000%;
+    margin-bottom: 5px;
+  }
+  div#gis {width: 100%; position: relative; height: 86%;}
+  #gi { width: 100%; position: relative; height: 100%}
+  }
+}
